@@ -59,8 +59,8 @@ module Cartman
 
     def total
       items.collect { |item|
-        (item.cost * 100).to_i
-      }.inject(0){|sum,cost| sum += cost} / 100.0
+        item.cost
+      }.inject(BigDecimal("0")){|sum,cost| sum += cost}
     end
 
     def ttl

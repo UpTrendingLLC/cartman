@@ -11,9 +11,9 @@ module Cartman
     end
 
     def cost
-      unit_cost = (@data.fetch(Cartman.config.unit_cost_field).to_f * 100).to_i
+      unit_cost = BigDecimal(@data.fetch(Cartman.config.unit_cost_field))
       quantity = @data.fetch(Cartman.config.quantity_field).to_i
-      (unit_cost * quantity) / 100.0
+      (unit_cost * quantity)
     end
 
     def cart

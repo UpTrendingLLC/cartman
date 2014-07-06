@@ -1,3 +1,4 @@
+require "bigdecimal"
 require "cartman/version"
 require "cartman/configuration"
 require "cartman/cart"
